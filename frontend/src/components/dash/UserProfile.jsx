@@ -48,10 +48,10 @@ const UserProfile = () => {
         const uploadedUrl = await uploadImage(file);
         setFormData({ ...formData, img: uploadedUrl });
         setUploadingImg(false);
-        toast.success("Image Uploaded!")
+        toast.success("Image Selected, Click 'Submit' to upload")
     }
 
-    const handleSubmit = async (e) => {
+    const handleAvatarSubmit = async (e) => {
         e.preventDefault();
         if (uploadingImg) return;
 
@@ -65,12 +65,10 @@ const UserProfile = () => {
             });
         
             if (response.ok) {
-                // Image URL successfully sent to the server
                 console.log('Image URL sent to the server!');
-                // Reset the form data
                 setFormData({ img: '' });
+                toast.success("Your Avatar has been updated!")
             } else {
-                // Handle the error if the server request fails
                 console.error('Failed to send image URL to the server');
             }
         } catch (error) {
@@ -144,7 +142,7 @@ const UserProfile = () => {
                         <form
                             encType='multipart/form-data' 
                             className='flex flex-col items-center justify-center mb-2'
-                            onSubmit={handleSubmit}
+                            onSubmit={handleAvatarSubmit}
                         >
                             <label className="relative">
                                 <input 
