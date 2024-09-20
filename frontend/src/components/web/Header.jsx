@@ -120,11 +120,11 @@ const Header = () => {
                     {/* nav end */}
                     {/* Signup button start */}
                     <div className=''>
-                        <Link to="/signup">
+                        <Link to="/login">
                             <button
                                 className='flex items-center justify-center px-6 w-auto h-10 text-white rounded-lg bg-gradient-to-r from-gray-900 to-primaryGreen text-sm md:text-md'
                             >
-                                Sign Up
+                                Log in
                             </button>
                         </Link>
                     </div>
