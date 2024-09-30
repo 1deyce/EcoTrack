@@ -61,7 +61,7 @@ const Hero = () => {
                             </div>
                             <img 
                                 src={Dash} 
-                                alt='' 
+                                alt='EcoTrack&apos;s Dashboard' 
                             />
                         </div>
                     </div>

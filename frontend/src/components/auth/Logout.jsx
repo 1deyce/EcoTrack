@@ -52,7 +52,7 @@ const Logout = () => {
                         <h2 
                             className="text-3xl mb-6 mt-6 text-center"
                         >
-                            Hi {user?.name}, are you sure you want to Logout?</h2>
+                            Hi {user?.name}, are you sure you want to log out?</h2>
                         <p className="mb-4 text-center text-sm">
                             You can always log back in at any time, thank you for using our platform. See you soon.
                         </p>
