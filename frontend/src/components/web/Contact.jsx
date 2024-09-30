@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { emailRegex } from '../../utils/emailRegex';
+import { emailRegex } from '../../js/emailRegex';
 import { toast } from "react-hot-toast";
 import { ThreeDots } from "react-loader-spinner";
 

@@ -153,7 +153,7 @@ const Header = () => {
                         </svg>
                         <svg 
                             id='mobile-menu-2'
-                            className={`w-6 h-6 ${isOpen ? '' : 'hidden'}`}
+                            className={`w-6 h-6 ${isOpen ? 'duration-500' : 'hidden'}`}
                             fill="currentColor" 
                             viewBox="0 0 20 20" 
                             xmlns="http://www.w3.org/2000/svg"

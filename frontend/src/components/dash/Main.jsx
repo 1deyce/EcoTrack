@@ -62,27 +62,27 @@ const Main = () => {
       {/*Reports and Analytics*/}
 
       <div className='flex items-center justify-between'>
-        <h1 className='text-white text-lg leading-[34px]'>Reports & Analytics</h1>
+        <h1 className='text-white text-lg font-semibold leading-[34px]'>Reports & Analytics</h1>
         <button className='flex items-center justify-center px-6 w-auto h-10 text-white rounded-lg bg-gradient-to-r from-primaryGreen to-black shadow-sm shadow-white hover:shadow-sm transform hover:scale-[103%] transition duration-300 ease-out'>
             Generate Report
         </button>
       </div>      
       <div className='flex pl-[3px] w-full gap-[20px] mt-[15px]'>
-        <div className='basis-[50%] bg-white cursor-pointer rounded-[4px]'>
-          <div className='bg-[#F8F9FC] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#EDEDED] mb-[20px] rounded-md'>
+        <div className='basis-[50%] bg-black text-white cursor-pointer rounded-[4px]'>
+          <div className='bg-[#F8F9FC] flex items-center justify-center py-[15px] px-[20px] border-b-[1px] border-[#EDEDED] mb-[10px] rounded-md'>
             <h2 className='text-darkGreen font-bold'>Collection Routes Overview</h2>
-            <FaEllipsisVertical className='cursor-pointer'/>
+            {/* <FaEllipsisVertical className='cursor-pointer text-black'/> */}
           </div>
           <div>
             <LineChart
-              width={500}
-              height={350}
+              width={800}
+              height={400}
               data={data}
               margin={{
-                top: 5,
+                top: 10,
                 right: 30,
-                left: 20,
-                bottom: 5,
+                left: 25,
+                bottom: 10,
               }}
             >
               <CartesianGrid strokeDasharray="3 3" />

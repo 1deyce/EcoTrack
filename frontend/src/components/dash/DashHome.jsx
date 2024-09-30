@@ -1,7 +1,8 @@
 import React from 'react'
 import SideBar from './SideBar.1';
 import Dashboard from '../../pages/Dashboard';
-import Main from './Main';
+// import Main from './Main';
+import Analytics from "./Analytics";
 import 'leaflet/dist/leaflet.css';
 import 'tailwindcss/tailwind.css';
 
@@ -14,7 +15,7 @@ const DashHome = () => {
       <div className='basis-[96%]'>
         <Dashboard />
         <div >
-          <Main />
+          <Analytics />
         </div>
       </div>
     </div>

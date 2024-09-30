@@ -13,7 +13,6 @@ import { FiLogOut } from "react-icons/fi";
 import { HiClipboardDocumentList } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
 
-  //Sidebar Items
 export const Menus = [
     { title: "Dashboard", route:"/dashboard-b" },
     { title: "Collection Schedule", route: "/dashboard-b/c-schedule", icon: <AiOutlineSchedule /> },
@@ -53,22 +52,21 @@ const SideBar  = () => {
 
   return (
     <div className='flex fixed z-50'>
-      <div className={`bg-darkGreen h-screen p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300 relative`}>
-        <BsArrowLeftShort className={`bg-white text-darkGreen text-3xl 
-          rounded-full absolute -right-3 top-9 
-          border border-darkGreen cursor-pointer ${!open && "rotate-180"} duration-400`} 
+      <div className={`bg-darkGreen h-screen justify-center rounded-sm p-5 pt-8 ${open ? "w-72 opacity-90" : "w-20"} duration-300 relative`}>
+        <BsArrowLeftShort 
+          className={`bg-white text-black text-3xl rounded-full absolute -right-4 top-9 cursor-pointer ${!open && "rotate-180"} duration-400`} 
           onClick={() => setOpen(!open)}/>
 
       <div className='inline-flex'>
-        <BiSolidCube className={`text-paleGreen text-4xl cursor-pointer block float-left mr-2 duration-500 ${open && "rotate-[360deg]"}`}/>
+        <BiSolidCube className={`text-paleGreen text-4xl cursor-pointer block float-left mr-2 duration-1000 ${open && "rotate-[360deg]"}`}/>
         <h1 className={`text-white origin-left font-medium text-2xl duration-300 ${!open && "scale-0"}`}>EcoTrack</h1>
       </div>
 
-      <ul className={`pt-2 ${open ? "duration-400 overflow-hidden" : ""}`}>
+      <ul className={`pt-2 ${open ? "duration-300 overflow-hidden" : ""}`}>
         {Menus.map((menu, index) => (
           <React.Fragment key={index}>
             <Link to={menu.route}>
-              <li className={`text-white text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-black rounded-md ${ menu.spacing ? "mt-9" : "mt-2" }`} style={{ whiteSpace: "nowrap" }}>
+              <li className={`text-white text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-black duration-300 rounded-md ${ menu.spacing ? "mt-9" : "mt-2" }`} style={{ whiteSpace: "nowrap" }}>
                 <span className='text-2xl block float-left text-paleGreen'>
                   {menu.icon ? menu.icon : <BiSolidDashboard />}
                 </span>

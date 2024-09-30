@@ -10,7 +10,7 @@ import { toast } from "react-hot-toast";
 const uploadPreset = "nhxmfptn";
 const cloudName = "duvw77iju"
 
-async function uploadImage(file) { // file from <input type="file"> 
+async function uploadImage(file) { 
     const data = new FormData();
     data.append("file", file);
     data.append("upload_preset", uploadPreset);
@@ -25,7 +25,6 @@ async function uploadImage(file) { // file from <input type="file">
     const img = await res.json();
     console.log(img);
     return img.secure_url;
-    // Post `img.secure_url` to your server and save to MongoDB
 }
 
 const UserProfile = () => {
@@ -43,10 +42,11 @@ const UserProfile = () => {
     const handleFileChange = async (e) => {
         const [file] = e.target.files;
         if (!file) return;
-
         setUploadingImg(true);
+
         const uploadedUrl = await uploadImage(file);
         setFormData({ ...formData, img: uploadedUrl });
+
         setUploadingImg(false);
         toast.success("Image Selected, Click 'Submit' to upload")
     }

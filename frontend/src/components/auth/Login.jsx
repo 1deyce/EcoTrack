@@ -11,7 +11,7 @@ import axios from "axios";
 
 const Login = () => {
     const [isLoading, setIsLoading] = useState(false);
-    const { setUser } = useContext(UserContext);  // use the `setUser` function from the `UserContext`
+    const { setUser } = useContext(UserContext);
     const navigate = useNavigate();
     const [data, setData] = useState({
         email: '',
@@ -20,9 +20,7 @@ const Login = () => {
 
     const loginUser = async (e) => {
         e.preventDefault();
-
         setIsLoading(true);
-
         const { email, password } = data;
     
         try {
@@ -31,12 +29,10 @@ const Login = () => {
             if (response.data.error) {
                 toast.error(response.data.error);
             } else {
-                // Login was successful, now fetch the profile
                 Cookies.set('authToken', response.data.token);
                 const profileResponse = await axios.get("/profile", { withCredentials: true });
     
                 if (profileResponse.data) {
-                    // Set user data in the context
                     setUser(profileResponse.data);
                     toast.success(`Login Successful. Welcome Back ${profileResponse.data.name}`);
                     navigate("/dashboard-b");
@@ -87,9 +83,9 @@ const Login = () => {
                             </div>
                             <div className="mt-5 flex justify-center">
                                 <Link to="/forgot">
-                                <p className="mb-0 mt-2 pt-1 text-xs font-regular underline">
-                                    Forgot Password {" "}
-                                </p>
+                                    <p className="mb-0 mt-2 pt-1 text-xs font-regular underline">
+                                        Forgot Password {" "}
+                                    </p>
                                 </Link>
                             </div>
                             <div className="mt-6 flex justify-center">

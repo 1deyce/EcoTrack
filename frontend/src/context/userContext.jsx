@@ -1,10 +1,11 @@
 import axios from "axios";
 import { createContext, useState, useEffect } from "react";
 
-export const UserContext = createContext({})
+export const UserContext = createContext({});
 
 export function UserContextProvider({children}) {
     const [user, setUser] = useState(null);
+    
     const fetchUserProfile = () => {
         axios.get('/profile', { withCredentials: true })
         .then(({ data }) => {
@@ -25,7 +26,6 @@ export function UserContextProvider({children}) {
     
     useEffect(() => {
         fetchUserProfile();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (

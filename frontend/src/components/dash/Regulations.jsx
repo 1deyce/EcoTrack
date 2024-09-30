@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Regulations = () => {
     return (
@@ -38,7 +39,7 @@ const Regulations = () => {
                             </li>
                             <li>
                                 integrated waste management reporting and planning. &nbsp;
-                                <a href="https://www.gov.za/sites/default/files/gcis_document/201409/34417gen435.pdf" class="link-button text-blue-500 underline">Learn more.</a>
+                                <a href="https://www.gov.za/sites/default/files/gcis_document/201409/34417gen435.pdf" className="link-button text-blue-500 underline">Learn more.</a>
                             </li>
                         </ul>
                     </div>
@@ -52,7 +53,7 @@ const Regulations = () => {
                     <div className='flex flex-wrap text-left w-[45vh] p-2'>
                         <div className='p-2 ml-[15px]'>
                             All organisations in South Africa (of any size) and individuals that are in a position to obtain, handle and store the personal information of another individual, whether it be in terms of their employment or as suppliers or service providers, must adhere to the requirements of the Act and implement steps to safeguard this information. Companies have 12 months to get their systems and processes in place to comply with the Act, in this case 1 July 2021. Non-compliance could result in not only reputational damage and/or potential civil damages claims, but punitive fines up to R10 million or 10 years imprisonment.&nbsp;
-                            <a href="https://popia.co.za" class="link-button text-blue-500 underline">Learn more.</a>
+                            <Link to="https://popia.co.za" className="link-button text-blue-500 underline">Learn more.</Link>
                         </div>
                     </div>
                 </div>

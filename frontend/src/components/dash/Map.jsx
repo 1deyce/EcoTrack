@@ -7,8 +7,8 @@ import 'leaflet/dist/leaflet.css';
 
 const Map = () => {
   return (
-    <div className="h-[86vh] sticky">
-      <MapContainer center={[-33.919667, 18.419253]} zoom={13} className="h-full">
+    <div className="h-auto w-full">
+      <MapContainer center={[-33.919667, 18.419253]} zoom={10} className="w-full">
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="Map data &copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors"
