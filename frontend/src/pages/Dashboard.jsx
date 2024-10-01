@@ -18,7 +18,7 @@ const Dashboard = () => {
             case "/dashboard-b/disposal":
                 return "Disposal Locations";
             case "/dashboard-b/user-profile":
-                return "User Profile";
+                return "Profile Settings";
             case "/dashboard-b/user-profile/addresses":
                 return "Addresses";
             case "/dashboard-b/regulations":
