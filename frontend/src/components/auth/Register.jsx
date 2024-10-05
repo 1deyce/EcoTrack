@@ -99,7 +99,7 @@ const SignUp = () => {
                                 <input 
                                     type="checkbox" 
                                     className="border border-gray-400 bg-red-50" 
-                                    required
+                                    //required
                                 />
                                 <span className='ml-2'>
                                     I accept the <a href="/" className="text-primaryGreen font-semibold">Terms of Use</a> &  <a href="/" className="text-primaryGreen font-semibold">Privacy Policy</a>. 
