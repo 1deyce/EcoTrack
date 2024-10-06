@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Logo from "../../assets/eco_logo.png";
 import Eco from "../../assets/ecoeco.png";
@@ -9,7 +9,7 @@ import { ThreeDots } from "react-loader-spinner";
 
 const SignUp = () => {
     const [isLoading, setIsLoading] = useState(false);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const [data, setData] = useState({
         name: '',
         email: '',
@@ -31,8 +31,8 @@ const SignUp = () => {
                 toast.error(data.error);
             } else {
                 setData({})
-                toast.success("Registration successful. Please verify your account, we've sent you an email. ")
-                // navigate("/login")
+                // toast.success("Registration successful. Please verify your account, we've sent you an email. ")
+                navigate("/login")
                 setIsLoading(false);
             }
         } catch (error) {
